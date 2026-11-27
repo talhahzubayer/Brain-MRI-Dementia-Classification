@@ -1,6 +1,6 @@
 # Limitations and lessons
 
-<!-- Navigation header (not source content). Sections below are copied verbatim from README.md. -->
+<!-- Navigation header (not source content). Sections below originate from the README preserved at commit 7895f7e. -->
 
 ## Limitations
 
@@ -21,7 +21,7 @@ The most useful outcome of the project was the iterative development process rat
 - A very large parameter count can produce an impressive result without providing a convincing model design.
 - Global Average Pooling can remove the parameter explosion introduced by flattening spatial feature maps into a large fully connected layer.
 - Data augmentation should reflect the domain; transformations that are common in natural-image classification can be inappropriate for medical images.
-- Augmentation is not a substitute for sufficient model capacity when both training and validation performance indicate underfitting.
+- Augmentation alone did not resolve the weak training and validation performance observed in the redesigned CNN experiments.
 - ImageNet-pretrained models can require substantial fine-tuning before their representations transfer effectively to greyscale MRI images.
 - Class imbalance needs to be considered in data splitting, optimisation and evaluation rather than addressed through accuracy alone.
 - Aggregate test accuracy and per-image softmax confidence answer different questions; a highly confident prediction can still be wrong.

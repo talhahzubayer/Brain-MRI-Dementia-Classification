@@ -1,6 +1,6 @@
 # Workflow and reproducibility
 
-<!-- Navigation header (not source content). Sections below are copied verbatim from README.md. -->
+<!-- Navigation header (not source content). Sections below originate from the README preserved at commit 7895f7e. -->
 
 ## Google Colab workflow
 
@@ -25,6 +25,13 @@ The repository preserves both the clean notebooks and their original executed co
 ```text
 .
 |-- README.md
+|-- docs/
+|   |-- experimental-development.md
+|   |-- limitations-and-lessons.md
+|   |-- preprocessing-and-class-imbalance.md
+|   |-- project-overview.md
+|   |-- testing-and-evaluation.md
+|   `-- workflow-and-reproducibility.md
 |-- filename_change.py
 `-- notebooks/
     |-- dementia_mri_classification_coursework_V1.ipynb

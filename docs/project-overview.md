@@ -1,10 +1,10 @@
-<!-- Navigation header (not source content). Sections below are copied verbatim from README.md. -->
+<!-- Navigation header (not source content). Sections below originate from the README preserved at commit 7895f7e. -->
 
 # Brain MRI Classification for Dementia Severity
 
 An iterative deep learning study using custom convolutional neural networks (CNNs), ResNet50 and a Vision Transformer (ViT-B/16) to classify brain MRI images into three dementia-severity categories. The project was developed and executed as a Google Colab notebook workflow using PyTorch, with the final recorded experiments run on an NVIDIA L4 GPU.
 
-The aim was not simply to train the most complex model available. The project progressed through three notebook versions, with problems found in earlier experiments informing changes to model capacity, medical-image augmentation and transfer-learning strategy. The final ViT-B/16 correctly classified **728 of 762 images in the test split**, giving a **test-set classification accuracy of 95.54%**, compared with **91.99%** for ResNet50 and approximately **47%** for the CNNs trained from scratch.
+The aim was not simply to train the most complex model available. The project progressed through three notebook versions, with problems found in earlier experiments informing changes to model capacity, medical-image augmentation and transfer-learning strategy. The final ViT-B/16 correctly classified **728 of 762 images in the test split**, giving a **test-set classification accuracy of 95.54%**, compared with **91.99%** for ResNet50 and approximately **47%** for the two CNNs trained from scratch in V3. Earlier CNN configurations recorded different results, including 97.64% for the first V1 CNN; see [experimental development](experimental-development.md).
 
 > **Important:** These results come from an image-level split of the supplied dataset. Patient identifiers were not available, so patient-level independence between training and testing could not be verified. The models are research prototypes developed for an MSc project and are not clinical diagnostic systems.
 
@@ -14,7 +14,7 @@ The aim was not simply to train the most complex model available. The project pr
 |---|---|
 | Dataset | 5,076 brain MRI images |
 | Classes | `NoImpairment`, `MildImpairment`, `ModerateImpairment` |
-| Original image size | 176 x 208 pixels |
+| Original image size | 208 x 176 pixels (height x width, sampled image) |
 | Split | 70% training / 15% validation / 15% testing |
 | Framework | PyTorch / torchvision |
 | Development environment | Google Colab |
