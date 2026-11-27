@@ -6,7 +6,7 @@
 
 - **Image-level rather than patient-level splitting.** Patient identifiers were not available. If multiple images originated from the same patient, patient information could potentially be represented across different splits.
 - **Single split.** Results come from one deterministic train/validation/test split rather than cross-validation.
-- **The same test split was revisited during development.** V1, V2 and V3 evaluate the same deterministic image-level test population when the dataset ordering is unchanged. The test images are not used for gradient updates or early stopping within an experiment, but repeated evaluation of this population during iterative development means the final result should not be treated as performance on a one-time, untouched external benchmark.
+- **The same split design was revisited during development.** V1, V2 and V3 regenerate the same deterministic image-level split, so their test populations are identical only if the dataset ordering was unchanged; this cannot be verified file by file because the original split files are not in the repository. The test images are not used for gradient updates or early stopping within an experiment, but repeated evaluation under this split design during iterative development means the final result should not be treated as performance on a one-time, untouched external benchmark.
 - **No external validation.** The final model was not evaluated on an independent dataset from another source, scanner or clinical site.
 - **No subgroup analysis.** Performance was not established independently across demographic groups or scanner types.
 - **ImageNet pretraining.** ResNet50 and ViT-B/16 used natural-image pretraining rather than weights developed specifically for medical imaging.
@@ -16,14 +16,14 @@
 
 ## What I learned from the project
 
-The most useful outcome of the project was the iterative development process rather than the final accuracy alone:
+In retrospect, the most useful outcome of the project was the iterative development process rather than the final accuracy alone:
 
 - A very large parameter count can produce an impressive result without providing a convincing model design.
 - Global Average Pooling can remove the parameter explosion introduced by flattening spatial feature maps into a large fully connected layer.
 - Data augmentation should reflect the domain; transformations that are common in natural-image classification can be inappropriate for medical images.
 - Augmentation alone did not resolve the weak training and validation performance observed in the redesigned CNN experiments.
-- ImageNet-pretrained models can require substantial fine-tuning before their representations transfer effectively to greyscale MRI images.
+- I began by assuming that sophisticated pretrained architectures would outperform the custom CNN while training only new classification heads. The V1 results did not support that expectation: frozen-backbone ResNet50 and ViT-B/16 both scored below the first CNN. Their recorded accuracies were substantially higher in subsequent configurations that also trained parts of their feature extractors. Architectural sophistication alone was therefore not a reliable guide to performance under the tested conditions, although the comparisons do not isolate the effects of the individual changes.
 - Class imbalance needs to be considered in data splitting, optimisation and evaluation rather than addressed through accuracy alone.
 - Aggregate test accuracy and per-image softmax confidence answer different questions; a highly confident prediction can still be wrong.
-- Holding test images out of training and early stopping is important, but repeatedly evaluating the same test population during iterative development reduces its value as a completely untouched final benchmark.
+- Holding test images out of training and early stopping is important, but repeatedly evaluating test images from the same split design during iterative development reduces their value as a completely untouched final benchmark.
 - A held-out test result is only as meaningful as the independence assumptions behind the split, which is why the absence of patient identifiers remains an important limitation.
