@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg aria-labelledby="title desc" font-family="Arial, Helvetica, sans-serif" xmlns="http://www.w3.org/2000/svg" width="520" height="354" viewBox="0 0 520 354" role="img">
+  <title id="title">From feature map to classifier</title>
+  <desc id="desc">Unaugmented CNN baselines. Shapes omit the batch dimension. Arrows show the path to the first dense layer. Each horizontal strip spans 100% of its model’s trainable parameters.</desc>
+  <rect x="0" y="0" width="520" height="354" fill="#ffffff" />
+  <text x="20" y="34" font-size="24" font-weight="700" fill="#192e39" text-anchor="start">From feature map to classifier</text>
+  <text x="20" y="59" font-size="16" font-weight="400" fill="#405761" text-anchor="start">Unaugmented CNNs · simplified paths, not to scale</text>
+  <line x1="20" y1="73" x2="500" y2="73" stroke="#bcccd0" stroke-width="1" />
+  <line x1="260" y1="86" x2="260" y2="212" stroke="#bcccd0" stroke-width="1" />
+  <text x="20" y="100" font-size="16" font-weight="700" fill="#126576" text-anchor="start" id="V1-blocks">V1   ·   3 convolutional blocks</text>
+  <text x="20" y="134" font-size="24" font-weight="700" fill="#192e39" text-anchor="start" id="V1-shape">128 × 28 × 28</text>
+  <line x1="24" y1="147" x2="24" y2="172" stroke="#126576" stroke-width="1" id="V1-flow" />
+  <path d="M 20 167 l 4 6 l 4 -6" fill="none" stroke="#126576" stroke-width="1.5" />
+  <text x="38" y="164" font-size="17" font-weight="400" fill="#192e39" text-anchor="start" id="V1-op">Flatten</text>
+  <text x="20" y="203" font-size="22" font-weight="700" fill="#192e39" text-anchor="start" id="V1-dense">100,352 → 512 units</text>
+  <text x="272" y="100" font-size="16" font-weight="700" fill="#126576" text-anchor="start" id="V2-blocks">V2   ·   4 convolutional blocks</text>
+  <text x="272" y="134" font-size="24" font-weight="700" fill="#192e39" text-anchor="start" id="V2-shape">256 × 14 × 14</text>
+  <line x1="276" y1="147" x2="276" y2="172" stroke="#126576" stroke-width="1" id="V2-flow" />
+  <path d="M 272 167 l 4 6 l 4 -6" fill="none" stroke="#126576" stroke-width="1.5" />
+  <text x="290" y="164" font-size="17" font-weight="400" fill="#192e39" text-anchor="start" id="V2-op">Global average pooling</text>
+  <text x="272" y="203" font-size="22" font-weight="700" fill="#192e39" text-anchor="start" id="V2-dense">256 → 128 units</text>
+  <text x="20" y="231" font-size="16" font-weight="400" fill="#405761" text-anchor="start">Feature maps shown as channels × height × width.</text>
+  <line x1="20" y1="244" x2="500" y2="244" stroke="#bcccd0" stroke-width="1" />
+  <text x="20" y="269" font-size="19" font-weight="700" fill="#192e39" text-anchor="start">First dense layer’s share of trainable parameters</text>
+  <rect x="20" y="285" width="226" height="11" fill="#dce6e8" id="V1-track" />
+  <rect x="20" y="285" width="225.583843723" height="11" fill="#126576" id="V1-share" />
+  <text x="20" y="319" font-size="19" font-weight="700" fill="#126576" text-anchor="start" id="V1-percent">99.8%</text>
+  <text x="20" y="341" font-size="15" font-weight="400" fill="#405761" text-anchor="start" id="V1-total">51,475,523 total trainable</text>
+  <rect x="272" y="285" width="226" height="11" fill="#dce6e8" id="V2-track" />
+  <rect x="272" y="285" width="6.157141568" height="11" fill="#126576" id="V2-share" />
+  <text x="272" y="319" font-size="19" font-weight="700" fill="#126576" text-anchor="start" id="V2-percent">2.7%</text>
+  <text x="272" y="341" font-size="15" font-weight="400" fill="#405761" text-anchor="start" id="V2-total">1,207,459 total trainable</text>
+</svg>

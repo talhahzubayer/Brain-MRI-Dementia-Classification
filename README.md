@@ -23,9 +23,17 @@ Rows are experiment families whose configurations can change between versions. E
 
 **Parameter placement.** In V1, 100,352 flattened features (128 × 28 × 28) fed a 512-unit layer holding 51,380,736 of the model's 51,475,523 trainable parameters. The V2 redesign used four convolutional blocks with batch normalisation and convolutional dropout, then global average pooling into a 128-unit head: 1,207,459 parameters. It ended at 50.45% training and 45.80% validation accuracy, consistent with underfitting under this setup. Extractor, normalisation, regularisation, pooling and head changed together, so the cause was not isolated. The final ViT trained 57,646,339 parameters, more than the original CNN.
 
+![V1 flattens 128 × 28 × 28 features into 100,352 inputs to 512 units. V2 averages each of 256 channels before a 128-unit layer. The first dense layer accounts for 99.8% and 2.7% of trainable parameters, respectively.](docs/figures/cnn-parameter-placement.svg)
+
+*Unaugmented CNN baselines. Each strip spans all trainable parameters in its own model. The dark segment is the first dense layer, including its biases. The extractor and regularisation also changed.*
+
 **Augmentation.** The V2 CNN experiments shared their architecture, initialisation seed and optimiser settings. Adding a pipeline of translation, scaling, intensity changes and blur changed the recorded test accuracy from 46.98% to 46.19%. This compares complete training pipelines under one recorded setup. In V3, stronger augmentation, including random erasing, was combined with reduced dropout, a wider head and a higher learning rate; its 47.90% cannot be attributed to augmentation alone. Only the second CNN experiment in each version used augmented training transforms. The final ViT used baseline transforms.
 
 **Pretrained adaptation.** V1 trained only replacement heads on frozen ImageNet backbones. From V2, ResNet50 also fine-tuned parts of its later stages. V2's ViT trained its last four encoder blocks, encoder layer norm and head at `1e-5`. V3 extended fine-tuning to the final eight encoder blocks, encoder layer norm, classification head, patch projection, class token and positional embeddings (67.0% of the model). Its learning rate of `5e-5` was five times the V2 ViT's rate and half the `1e-4` base rate. Accuracy increased from 87.53% to 95.54%, with these changes made together.
+
+![V1 trained the head. V2 added blocks 9–12 and final encoder normalisation. V3 added blocks 5–8, patch projection, class token and positional embeddings. Adam learning rates were 1e−4, 1e−5 and 5e−5.](docs/figures/vit-trainable-components.svg)
+
+*Parameter trainability in the recorded ViT runs. Encoder blocks are numbered 1–12 from the input. The learning rate changed alongside the trainable components.*
 
 [Full metrics by version](docs/experimental-development.md) · [Transforms and class weighting](docs/preprocessing-and-class-imbalance.md)
 

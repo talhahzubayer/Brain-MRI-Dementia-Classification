@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg aria-labelledby="title desc" font-family="Arial, Helvetica, sans-serif" xmlns="http://www.w3.org/2000/svg" width="520" height="350" viewBox="0 0 520 350" role="img">
+  <title id="title">Trainable components of ViT-B/16</title>
+  <desc id="desc">Filled checks denote trainable parameters and open dashes frozen parameters. Rows group model components. Block numbers are one-based.</desc>
+  <rect x="0" y="0" width="520" height="350" fill="#ffffff" />
+  <text x="20" y="34" font-size="24" font-weight="700" fill="#192e39" text-anchor="start">Trainable components of ViT-B/16</text>
+  <g id="legend-trainable">
+    <rect x="20" y="50" width="16" height="16" fill="#126576" stroke="#126576" stroke-width="1" />
+    <path d="M 23 58 l 3 3 l 6 -7" stroke="#ffffff" stroke-width="1.8" fill="none" />
+  </g>
+  <text x="44" y="64" font-size="16" font-weight="400" fill="#405761" text-anchor="start">Trainable</text>
+  <g id="legend-frozen">
+    <rect x="139" y="50" width="16" height="16" fill="#ffffff" stroke="#687d84" stroke-width="1" />
+    <path d="M 143 58 h 8" stroke="#52666d" stroke-width="1.8" fill="none" />
+  </g>
+  <text x="163" y="64" font-size="16" font-weight="400" fill="#405761" text-anchor="start">Frozen</text>
+  <text x="292" y="95" font-size="19" font-weight="700" fill="#126576" text-anchor="middle" id="V1-header">V1</text>
+  <text x="380" y="95" font-size="19" font-weight="700" fill="#126576" text-anchor="middle" id="V2-header">V2</text>
+  <text x="468" y="95" font-size="19" font-weight="700" fill="#126576" text-anchor="middle" id="V3-header">V3</text>
+  <text x="20" y="95" font-size="17" font-weight="700" fill="#192e39" text-anchor="start">Parameter group</text>
+  <line x1="20" y1="104" x2="500" y2="104" stroke="#bcccd0" stroke-width="1" />
+  <text x="20" y="127" font-size="17" font-weight="400" fill="#192e39" text-anchor="start" id="label-patch_projection">Patch projection</text>
+  <g id="V1-patch_projection">
+    <rect x="284" y="114" width="16" height="16" fill="#ffffff" stroke="#687d84" stroke-width="1" />
+    <path d="M 288 122 h 8" stroke="#52666d" stroke-width="1.8" fill="none" />
+  </g>
+  <g id="V2-patch_projection">
+    <rect x="372" y="114" width="16" height="16" fill="#ffffff" stroke="#687d84" stroke-width="1" />
+    <path d="M 376 122 h 8" stroke="#52666d" stroke-width="1.8" fill="none" />
+  </g>
+  <g id="V3-patch_projection">
+    <rect x="460" y="114" width="16" height="16" fill="#126576" stroke="#126576" stroke-width="1" />
+    <path d="M 463 122 l 3 3 l 6 -7" stroke="#ffffff" stroke-width="1.8" fill="none" />
+  </g>
+  <text x="20" y="148" font-size="17" font-weight="400" fill="#192e39" text-anchor="start" id="label-class_token">Class token</text>
+  <g id="V1-class_token">
+    <rect x="284" y="135" width="16" height="16" fill="#ffffff" stroke="#687d84" stroke-width="1" />
+    <path d="M 288 143 h 8" stroke="#52666d" stroke-width="1.8" fill="none" />
+  </g>
+  <g id="V2-class_token">
+    <rect x="372" y="135" width="16" height="16" fill="#ffffff" stroke="#687d84" stroke-width="1" />
+    <path d="M 376 143 h 8" stroke="#52666d" stroke-width="1.8" fill="none" />
+  </g>
+  <g id="V3-class_token">
+    <rect x="460" y="135" width="16" height="16" fill="#126576" stroke="#126576" stroke-width="1" />
+    <path d="M 463 143 l 3 3 l 6 -7" stroke="#ffffff" stroke-width="1.8" fill="none" />
+  </g>
+  <text x="20" y="169" font-size="17" font-weight="400" fill="#192e39" text-anchor="start" id="label-position_embedding">Positional embeddings</text>
+  <g id="V1-position_embedding">
+    <rect x="284" y="156" width="16" height="16" fill="#ffffff" stroke="#687d84" stroke-width="1" />
+    <path d="M 288 164 h 8" stroke="#52666d" stroke-width="1.8" fill="none" />
+  </g>
+  <g id="V2-position_embedding">
+    <rect x="372" y="156" width="16" height="16" fill="#ffffff" stroke="#687d84" stroke-width="1" />
+    <path d="M 376 164 h 8" stroke="#52666d" stroke-width="1.8" fill="none" />
+  </g>
+  <g id="V3-position_embedding">
+    <rect x="460" y="156" width="16" height="16" fill="#126576" stroke="#126576" stroke-width="1" />
+    <path d="M 463 164 l 3 3 l 6 -7" stroke="#ffffff" stroke-width="1.8" fill="none" />
+  </g>
+  <line x1="20" y1="178" x2="500" y2="178" stroke="#bcccd0" stroke-width="1" />
+  <text x="20" y="200" font-size="17" font-weight="400" fill="#192e39" text-anchor="start" id="label-block_0">Encoder blocks 1–4</text>
+  <g id="V1-block_0">
+    <rect x="284" y="187" width="16" height="16" fill="#ffffff" stroke="#687d84" stroke-width="1" />
+    <path d="M 288 195 h 8" stroke="#52666d" stroke-width="1.8" fill="none" />
+  </g>
+  <g id="V2-block_0">
+    <rect x="372" y="187" width="16" height="16" fill="#ffffff" stroke="#687d84" stroke-width="1" />
+    <path d="M 376 195 h 8" stroke="#52666d" stroke-width="1.8" fill="none" />
+  </g>
+  <g id="V3-block_0">
+    <rect x="460" y="187" width="16" height="16" fill="#ffffff" stroke="#687d84" stroke-width="1" />
+    <path d="M 464 195 h 8" stroke="#52666d" stroke-width="1.8" fill="none" />
+  </g>
+  <text x="20" y="221" font-size="17" font-weight="400" fill="#192e39" text-anchor="start" id="label-block_4">Encoder blocks 5–8</text>
+  <g id="V1-block_4">
+    <rect x="284" y="208" width="16" height="16" fill="#ffffff" stroke="#687d84" stroke-width="1" />
+    <path d="M 288 216 h 8" stroke="#52666d" stroke-width="1.8" fill="none" />
+  </g>
+  <g id="V2-block_4">
+    <rect x="372" y="208" width="16" height="16" fill="#ffffff" stroke="#687d84" stroke-width="1" />
+    <path d="M 376 216 h 8" stroke="#52666d" stroke-width="1.8" fill="none" />
+  </g>
+  <g id="V3-block_4">
+    <rect x="460" y="208" width="16" height="16" fill="#126576" stroke="#126576" stroke-width="1" />
+    <path d="M 463 216 l 3 3 l 6 -7" stroke="#ffffff" stroke-width="1.8" fill="none" />
+  </g>
+  <text x="20" y="242" font-size="17" font-weight="400" fill="#192e39" text-anchor="start" id="label-block_8">Encoder blocks 9–12</text>
+  <g id="V1-block_8">
+    <rect x="284" y="229" width="16" height="16" fill="#ffffff" stroke="#687d84" stroke-width="1" />
+    <path d="M 288 237 h 8" stroke="#52666d" stroke-width="1.8" fill="none" />
+  </g>
+  <g id="V2-block_8">
+    <rect x="372" y="229" width="16" height="16" fill="#126576" stroke="#126576" stroke-width="1" />
+    <path d="M 375 237 l 3 3 l 6 -7" stroke="#ffffff" stroke-width="1.8" fill="none" />
+  </g>
+  <g id="V3-block_8">
+    <rect x="460" y="229" width="16" height="16" fill="#126576" stroke="#126576" stroke-width="1" />
+    <path d="M 463 237 l 3 3 l 6 -7" stroke="#ffffff" stroke-width="1.8" fill="none" />
+  </g>
+  <line x1="20" y1="250" x2="500" y2="250" stroke="#bcccd0" stroke-width="1" />
+  <text x="20" y="272" font-size="17" font-weight="400" fill="#192e39" text-anchor="start" id="label-final_encoder_norm">Final encoder norm</text>
+  <g id="V1-final_encoder_norm">
+    <rect x="284" y="259" width="16" height="16" fill="#ffffff" stroke="#687d84" stroke-width="1" />
+    <path d="M 288 267 h 8" stroke="#52666d" stroke-width="1.8" fill="none" />
+  </g>
+  <g id="V2-final_encoder_norm">
+    <rect x="372" y="259" width="16" height="16" fill="#126576" stroke="#126576" stroke-width="1" />
+    <path d="M 375 267 l 3 3 l 6 -7" stroke="#ffffff" stroke-width="1.8" fill="none" />
+  </g>
+  <g id="V3-final_encoder_norm">
+    <rect x="460" y="259" width="16" height="16" fill="#126576" stroke="#126576" stroke-width="1" />
+    <path d="M 463 267 l 3 3 l 6 -7" stroke="#ffffff" stroke-width="1.8" fill="none" />
+  </g>
+  <text x="20" y="293" font-size="17" font-weight="400" fill="#192e39" text-anchor="start" id="label-head">Classifier head</text>
+  <g id="V1-head">
+    <rect x="284" y="280" width="16" height="16" fill="#126576" stroke="#126576" stroke-width="1" />
+    <path d="M 287 288 l 3 3 l 6 -7" stroke="#ffffff" stroke-width="1.8" fill="none" />
+  </g>
+  <g id="V2-head">
+    <rect x="372" y="280" width="16" height="16" fill="#126576" stroke="#126576" stroke-width="1" />
+    <path d="M 375 288 l 3 3 l 6 -7" stroke="#ffffff" stroke-width="1.8" fill="none" />
+  </g>
+  <g id="V3-head">
+    <rect x="460" y="280" width="16" height="16" fill="#126576" stroke="#126576" stroke-width="1" />
+    <path d="M 463 288 l 3 3 l 6 -7" stroke="#ffffff" stroke-width="1.8" fill="none" />
+  </g>
+  <line x1="20" y1="306" x2="500" y2="306" stroke="#bcccd0" stroke-width="1" />
+  <text x="20" y="333" font-size="16" font-weight="700" fill="#192e39" text-anchor="start">Adam learning rate</text>
+  <text x="292" y="333" font-size="17" font-weight="700" fill="#192e39" text-anchor="middle" id="V1-rate">1e−4</text>
+  <text x="380" y="333" font-size="17" font-weight="700" fill="#192e39" text-anchor="middle" id="V2-rate">1e−5</text>
+  <text x="468" y="333" font-size="17" font-weight="700" fill="#192e39" text-anchor="middle" id="V3-rate">5e−5</text>
+</svg>
